@@ -1,0 +1,152 @@
+[
+  {
+    "text":[
+      "There is a <Z> <C> <M> <S>; are there any <Z2> <C2> <M2> <S2>s <R> it?"
+    ],
+    "nodes":[
+      {"inputs":[], "type":"scene"},
+      {"side_inputs":["<Z>", "<C>", "<M>", "<S>"], "inputs":[0], "type":"filter_exist"},
+      {"side_inputs":["<R>", "<Z2>", "<C2>", "<M2>", "<S2>"], "inputs":[1], "type":"relate_filter_exist"}
+    ],
+    "params":[
+      {"type":"Size", "name":"<Z>"},
+      {"type":"Color", "name":"<C>"},
+      {"type":"Material", "name":"<M>"},
+      {"type":"Shape", "name":"<S>"},
+      {"type":"Relation", "name":"<R>"},
+      {"type":"Size", "name":"<Z2>"},
+      {"type":"Color", "name":"<C2>"},
+      {"type":"Material", "name":"<M2>"},
+      {"type":"Shape", "name":"<S2>"}
+    ],
+    "constraints":[
+      {"params":["<Z>"], "type":"NULL"},
+      {"params":["<Z2>"], "type":"NULL"},
+      {"params":["<S>"], "type":"SHAPE", "shape":"sphere"},
+      {"params":["<S2>"], "type":"SHAPE", "shape":"sphere"},
+      {"params":["<C>"], "type":"COLOR", "color":["blue"]},
+      {"params":["<C2>"], "type":"COLOR", "color":["green", "red", "purple", "cyan"]},
+      {"params":["<C2>", "<C>"], "type":"EQ"}
+    ]
+  },
+  {
+    "text":[
+      "There is a <Z> <C> <M> <S>; are there any <Z2> <C2> <M2> <S2>s <R> it?"
+    ],
+    "nodes":[
+      {"inputs":[], "type":"scene"},
+      {"side_inputs":["<Z>", "<C>", "<M>", "<S>"], "inputs":[0], "type":"filter_exist"},
+      {"side_inputs":["<R>", "<Z2>", "<C2>", "<M2>", "<S2>"], "inputs":[1], "type":"relate_filter_exist"}
+    ],
+    "params":[
+      {"type":"Size", "name":"<Z>"},
+      {"type":"Color", "name":"<C>"},
+      {"type":"Material", "name":"<M>"},
+      {"type":"Shape", "name":"<S>"},
+      {"type":"Relation", "name":"<R>"},
+      {"type":"Size", "name":"<Z2>"},
+      {"type":"Color", "name":"<C2>"},
+      {"type":"Material", "name":"<M2>"},
+      {"type":"Shape", "name":"<S2>"}
+    ],
+    "constraints":[
+      {"params":["<Z>"], "type":"NULL"},
+      {"params":["<Z2>"], "type":"NULL"},
+      {"params":["<S>"], "type":"SHAPE", "shape":"sphere"},
+      {"params":["<S2>"], "type":"SHAPE", "shape":"sphere"},
+      {"params":["<C>"], "type":"COLOR", "color":["red"]},
+      {"params":["<C2>"], "type":"COLOR", "color":["green", "blue", "purple", "cyan"]},
+      {"params":["<C2>", "<C>"], "type":"EQ"}
+    ]
+  },
+  {
+    "text":[
+      "There is a <Z> <C> <M> <S>; are there any <Z2> <C2> <M2> <S2>s <R> it?"
+    ],
+    "nodes":[
+      {"inputs":[], "type":"scene"},
+      {"side_inputs":["<Z>", "<C>", "<M>", "<S>"], "inputs":[0], "type":"filter_exist"},
+      {"side_inputs":["<R>", "<Z2>", "<C2>", "<M2>", "<S2>"], "inputs":[1], "type":"relate_filter_exist"}
+    ],
+    "params":[
+      {"type":"Size", "name":"<Z>"},
+      {"type":"Color", "name":"<C>"},
+      {"type":"Material", "name":"<M>"},
+      {"type":"Shape", "name":"<S>"},
+      {"type":"Relation", "name":"<R>"},
+      {"type":"Size", "name":"<Z2>"},
+      {"type":"Color", "name":"<C2>"},
+      {"type":"Material", "name":"<M2>"},
+      {"type":"Shape", "name":"<S2>"}
+    ],
+    "constraints":[
+      {"params":["<Z>"], "type":"NULL"},
+      {"params":["<Z2>"], "type":"NULL"},
+      {"params":["<S>"], "type":"SHAPE", "shape":"sphere"},
+      {"params":["<S2>"], "type":"SHAPE", "shape":"sphere"},
+      {"params":["<C>"], "type":"COLOR", "color":["purple"]},
+      {"params":["<C2>"], "type":"COLOR", "color":["green", "red", "blue", "cyan"]},
+      {"params":["<C2>", "<C>"], "type":"EQ"}
+    ]
+  },
+  {
+    "text":[
+      "There is a <Z> <C> <M> <S>, are there any <Z2> <C2> <M2> <S2>s <R> it?"
+    ],
+    "nodes":[
+      {"inputs":[], "type":"scene"},
+      {"side_inputs":["<Z>", "<C>", "<M>", "<S>"], "inputs":[0], "type":"filter_exist"},
+      {"side_inputs":["<R>", "<Z2>", "<C2>", "<M2>", "<S2>"], "inputs":[1], "type":"relate_filter_exist"}
+    ],
+    "params":[
+      {"type":"Size", "name":"<Z>"},
+      {"type":"Color", "name":"<C>"},
+      {"type":"Material", "name":"<M>"},
+      {"type":"Shape", "name":"<S>"},
+      {"type":"Relation", "name":"<R>"},
+      {"type":"Size", "name":"<Z2>"},
+      {"type":"Color", "name":"<C2>"},
+      {"type":"Material", "name":"<M2>"},
+      {"type":"Shape", "name":"<S2>"}
+    ],
+    "constraints":[
+      {"params":["<Z>"], "type":"NULL"},
+      {"params":["<Z2>"], "type":"NULL"},
+      {"params":["<S>"], "type":"SHAPE", "shape":"sphere"},
+      {"params":["<S2>"], "type":"SHAPE", "shape":"sphere"},
+      {"params":["<C>"], "type":"COLOR", "color":["green"]},
+      {"params":["<C2>"], "type":"COLOR", "color":["blue", "red", "purple", "cyan"]},
+      {"params":["<C2>", "<C>"], "type":"EQ"}
+    ]
+  },
+  {
+    "text":[
+      "There is a <Z> <C> <M> <S>, are there any <Z2> <C2> <M2> <S2>s <R> it?"
+    ],
+    "nodes":[
+      {"inputs":[], "type":"scene"},
+      {"side_inputs":["<Z>", "<C>", "<M>", "<S>"], "inputs":[0], "type":"filter_exist"},
+      {"side_inputs":["<R>", "<Z2>", "<C2>", "<M2>", "<S2>"], "inputs":[1], "type":"relate_filter_exist"}
+    ],
+    "params":[
+      {"type":"Size", "name":"<Z>"},
+      {"type":"Color", "name":"<C>"},
+      {"type":"Material", "name":"<M>"},
+      {"type":"Shape", "name":"<S>"},
+      {"type":"Relation", "name":"<R>"},
+      {"type":"Size", "name":"<Z2>"},
+      {"type":"Color", "name":"<C2>"},
+      {"type":"Material", "name":"<M2>"},
+      {"type":"Shape", "name":"<S2>"}
+    ],
+    "constraints":[
+      {"params":["<Z>"], "type":"NULL"},
+      {"params":["<Z2>"], "type":"NULL"},
+      {"params":["<S>"], "type":"SHAPE", "shape":"sphere"},
+      {"params":["<S2>"], "type":"SHAPE", "shape":"sphere"},
+      {"params":["<C>"], "type":"COLOR", "color":["cyan"]},
+      {"params":["<C2>"], "type":"COLOR", "color":["green", "red", "purple", "blue"]},
+      {"params":["<C2>", "<C>"], "type":"EQ"}
+    ]
+  }
+]

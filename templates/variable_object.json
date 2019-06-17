@@ -1,0 +1,33 @@
+[
+  {
+    "text":[
+      "There is a <Z> <C> <M> <S>; are there any <Z2> <C2> <M2> <S2>s <R> it?"
+    ],
+    "nodes":[
+      {"inputs":[], "type":"scene"},
+      {"side_inputs":["<Z>", "<C>", "<M>", "<S>"], "inputs":[0], "type":"filter_unique"},
+      {"side_inputs":["<R>", "<Z2>", "<C2>", "<M2>", "<S2>"], "inputs":[1], "type":"relate_filter_exist"}
+    ],
+    "params":[
+      {"type":"Size", "name":"<Z>"},
+      {"type":"Color", "name":"<C>"},
+      {"type":"Material", "name":"<M>"},
+      {"type":"Shape", "name":"<S>"},
+      {"type":"Relation", "name":"<R>"},
+      {"type":"Size", "name":"<Z2>"},
+      {"type":"Color", "name":"<C2>"},
+      {"type":"Material", "name":"<M2>"},
+      {"type":"Shape", "name":"<S2>"}
+    ],
+    "constraints":[
+      {"params":["<C2>"], "type":"COLOR_SET", "color":["red", "green", "blue", "purple", "cyan"]},
+      {"params":["<C>"], "type":"COLOR_SET", "color":["red", "green", "blue", "purple", "cyan"]},
+      {"params":["<Z2>"], "type":"SIZE_SET", "size":["large"]},
+      {"params":["<Z>"], "type":"SIZE_SET", "size":["large"]},
+      {"params":["<S2>"], "type":"SHAPE_SET", "shape":["sphere", "cube", "cylinder"]},
+      {"params":["<S>"], "type":"SHAPE_SET", "shape":["sphere", "cube", "cylinder"]},
+      {"params":["<M2>"], "type":"MATERIAL_SET", "material":["rubber"]},
+      {"params":["<M>"], "type":"MATERIAL_SET", "material":["rubber"]}
+    ]
+  }
+]

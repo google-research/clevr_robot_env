@@ -1,0 +1,88 @@
+[
+  {
+    "text":[
+      "Are there any <Z2> <C2> <M2> <S2>s <R> the <Z> <C> <M> <S>?",
+      "There is a <Z> <C> <M> <S>; are there any <Z2> <C2> <M2> <S2>s <R> it?"
+    ],
+    "nodes":[
+      {"inputs":[], "type":"scene"},
+      {"side_inputs":["<Z>", "<C>", "<M>", "<S>"], "inputs":[0], "type":"filter_unique"},
+      {"side_inputs":["<R>", "<Z2>", "<C2>", "<M2>", "<S2>"], "inputs":[1], "type":"relate_filter_exist"}
+    ],
+    "params":[
+      {"type":"Size", "name":"<Z>"},
+      {"type":"Color", "name":"<C>"},
+      {"type":"Material", "name":"<M>"},
+      {"type":"Shape", "name":"<S>"},
+      {"type":"Relation", "name":"<R>"},
+      {"type":"Size", "name":"<Z2>"},
+      {"type":"Color", "name":"<C2>"},
+      {"type":"Material", "name":"<M2>"},
+      {"type":"Shape", "name":"<S2>"}
+    ],
+    "constraints":[
+
+    ]
+  },
+  {
+    "text":[
+      "What color is the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?",
+      "What is the color of the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?",
+      "The <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S> is what color?",
+      "There is a <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>; what color is it?",
+      "There is a <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>; what is its color?"
+    ],
+    "nodes":[
+      {"inputs":[], "type":"scene"},
+      {"side_inputs":["<Z>", "<C>", "<M>", "<S>"], "inputs":[0], "type":"filter_unique"},
+      {"side_inputs":["<R>", "<Z2>", "<C2>", "<M2>", "<S2>"], "inputs":[1], "type":"relate_filter_unique"},
+      {"inputs":[2], "type":"query_color"}
+    ],
+    "params":[
+      {"type":"Size", "name":"<Z>"},
+      {"type":"Color", "name":"<C>"},
+      {"type":"Material", "name":"<M>"},
+      {"type":"Shape", "name":"<S>"},
+      {"type":"Relation", "name":"<R>"},
+      {"type":"Size", "name":"<Z2>"},
+      {"type":"Color", "name":"<C2>"},
+      {"type":"Material", "name":"<M2>"},
+      {"type":"Shape", "name":"<S2>"}
+    ],
+    "constraints":[
+      {"params":["<C2>"], "type":"NULL"}
+    ]
+  },
+  {
+    "text":[
+      "Are there any <Z2> <C2> <M2> <S2>s <R> the <Z> <C> <M> <S>?",
+      "There is a <Z> <C> <M> <S>; are there any <Z2> <C2> <M2> <S2>s <R> it?"
+    ],
+    "nodes":[
+      {"inputs":[], "type":"scene"},
+      {"side_inputs":["<Z>", "<C>", "<M>", "<S>"], "inputs":[0], "type":"filter_unique"},
+      {"side_inputs":["<R>", "<Z2>", "<C2>", "<M2>", "<S2>"], "inputs":[1], "type":"relate_filter_exist"}
+    ],
+    "params":[
+      {"type":"Size", "name":"<Z>"},
+      {"type":"Color", "name":"<C>"},
+      {"type":"Material", "name":"<M>"},
+      {"type":"Shape", "name":"<S>"},
+      {"type":"Relation", "name":"<R>"},
+      {"type":"Size", "name":"<Z2>"},
+      {"type":"Color", "name":"<C2>"},
+      {"type":"Material", "name":"<M2>"},
+      {"type":"Shape", "name":"<S2>"}
+    ],
+    "constraints":[
+      {"params":["<C2>"], "type":"NULL"},
+
+
+
+
+      {"params":["<C>"], "type":"COLOR", "color":"blue"},
+      {"params":["<S>"], "type":"SHAPE", "shape":"sphere"},
+      {"params":["<R>"], "type":"RELATION", "relation":"left"}
+    ]
+  }
+]
