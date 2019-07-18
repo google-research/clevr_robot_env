@@ -19,10 +19,17 @@ import random
 import re
 import time
 
-import third_party.clevr_robot_env_utils.question_engine as qeng
+try:
+  import third_party.clevr_robot_env_utils.question_engine as qeng
+except ImportError as e:
+  print(e)
 
 
-synonyms_json = os.path.join(__file__, '..', 'templates', 'synonyms.json')
+parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
+synonyms_json = os.path.join(
+    os.path.abspath(os.path.join(parent_dir, os.pardir)),
+    'templates',
+    'synonyms.json')
 
 
 with open(synonyms_json, 'r') as f:

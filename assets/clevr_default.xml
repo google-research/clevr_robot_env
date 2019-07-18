@@ -12,33 +12,33 @@
     <geom name='table' type='plane' pos='0 0.5 -0.325' size='1 1 0.1' contype='1' conaffinity='1'/>
 
     <!--<body name='object' pos='0.55 -0.3 -0.275' >-->
-    <body name='object1' pos='-0.80 -0.1 -0.225' >
+    <body name='obj1' pos='-0.80 -0.1 -0.225' >
       <!--<geom rgba='1 1 1 0' type='sphere' size='0.05 0.05 0.05' density='0.00001' conaffinity='0'/>-->
       <geom rgba='1 1 1 1' type='cylinder' size='0.05 0.1 0.1' density='0.00001' contype='1' conaffinity='0'/>
       <joint name='obj1_slidey' type='slide' pos='0 0 0' axis='0 1 0' range='-10.3213 10.3' damping='0.5'/>
       <joint name='obj1_slidex' type='slide' pos='0 0 0' axis='1 0 0' range='-10.3213 10.3' damping='0.5'/>
     </body>
 
-    <body name='object2' pos='0.60 -0.05 -0.275' >
+    <body name='obj2' pos='0.60 -0.05 -0.275' >
       <!--<geom rgba='1 1 1 0' type='sphere' size='0.05 0.05 0.05' density='0.00001' conaffinity='0'/>-->
       <geom rgba='0 1 1 1' type='cylinder' size='0.05 0.05 0.05' density='0.00001' contype='1' conaffinity='0'/>
       <joint name='obj2_slidey' type='slide' pos='0 0 0' axis='0 1 0' range='-10.3213 10.3' damping='0.5'/>
       <joint name='obj2_slidex' type='slide' pos='0 0 0' axis='1 0 0' range='-10.3213 10.3' damping='0.5'/>
     </body>
 
-    <body name='object3' pos='0.30 0.60 -0.225' >
+    <body name='obj3' pos='0.30 0.60 -0.225' >
       <!--<geom rgba='1 1 1 0' type='box' size='0.1 0.1 0.1' density='0.00001' conaffinity='0'/>-->
       <geom rgba='0 1 0.5 1' type='box' size='0.1 0.1 0.1' density='0.00001' contype='1' conaffinity='0'/>
       <joint name='obj3_slidey' type='slide' pos='0 0 0' axis='0 1 0' range='-10.3213 10.3' damping='0.5'/>
       <joint name='obj3_slidex' type='slide' pos='0 0 0' axis='1 0 0' range='-10.3213 10.3' damping='0.5'/>
     </body>
 
-    <body pos='-0.4793 -0.1582 -0.2228' name='obj4'>
+    <body pos='-0.4793 -0.1582 -0.2228' name='obj0'>
       <geom size='0.1021 0.1021 0.1021' conaffinity='1' contype='1' density='1' rgba='0.2 1 0 1' type='box'/>
       <joint pos='0 0 0' damping='0.75' type='free' limited='false' name='obj3_slide'/>
     </body>
 
-    <body pos='0.3660 0.4967 -0.2166' name='obj0'>
+    <body pos='0.3660 0.4967 -0.2166' name='obj4'>
       <geom size='0.1083 0.0902 0.05' conaffinity='1' contype='1' density='1' rgba='0.2 1 0 1' type='box'/>
       <joint pos='0 0 0' damping='0.75' type='free' limited='false' name='obj4_slide'/>
     </body>
