@@ -29,7 +29,7 @@ import numpy as np
 
 
 class MujocoEnv(gym.Env):
-  """Mujoco environment that uses dm control's wrapper."""
+  """Custom Mujoco environment that uses dm control's wrapper."""
 
   def __init__(self, model_path, frame_skip, max_episode_steps=None,
                reward_threshold=None):
@@ -39,7 +39,8 @@ class MujocoEnv(gym.Env):
     if model_path.startswith('/'):
       fullpath = model_path
     else:
-      fullpath = os.path.join(os.path.dirname(__file__), 'assets', model_path)
+      fullpath = os.path.join(
+          os.path.abspath(os.path.dirname(__file__)), 'assets', model_path)
 
     if not os.path.exists(fullpath):
       raise IOError('File %s does not exist' % fullpath)

@@ -37,23 +37,25 @@ from clevr_robot_env.utils.xml_utils import convert_scene_to_xml
 
 try:
   import cv2
-  import mujoco
-  from gym.envs.mujoco import mujoco_env
+  import mujoco_env  # custom mujoco_env
+  from dm_control import mujoco
 except ImportError as e:
   print(e)
 
-DEFAULT_XML_PATH = os.path.join(__file__, 'assets/clevr_default.xml')
-FIXED_PATH = os.path.join(__file__, 'templates', '10_fixed_objective.pkl')
+file_dir = os.path.abspath(os.path.dirname(__file__))
+
+DEFAULT_XML_PATH = os.path.join(file_dir, 'assets', 'clevr_default.xml')
+FIXED_PATH = os.path.join(file_dir, 'templates', '10_fixed_objective.pkl')
 
 # metadata
-DEFAULT_METADATA_PATH = os.path.join(__file__, 'metadata', 'metadata.json')
-VARIABLE_OBJ_METADATA_PATH = os.path.join(__file__, 'metadata',
+DEFAULT_METADATA_PATH = os.path.join(file_dir, 'metadata', 'metadata.json')
+VARIABLE_OBJ_METADATA_PATH = os.path.join(file_dir, 'metadata',
                                           'variable_obj_meta_data.json')
 
 # template_path
 EVEN_Q_DIST_TEMPLATE = os.path.join(
-    __file__, 'templates/even_question_distribution.json')
-VARIABLE_OBJ_TEMPLATE = os.path.join(__file__, 'templates',
+    file_dir, 'templates/even_question_distribution.json')
+VARIABLE_OBJ_TEMPLATE = os.path.join(file_dir, 'templates',
                                      'variable_object.json')
 
 

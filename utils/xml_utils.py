@@ -22,13 +22,13 @@ from __future__ import print_function
 import os
 import xml.etree.ElementTree as ET
 
-red_metal_path = os.path.join(__file__, '..', 'assets/textures/metal_red.png')
-cyan_metal_path = os.path.join(__file__, '..', 'assets/textures/metal_cyan.png')
-purple_metal_path = os.path.join(
-    __file__, '..', 'assets/textures/metal_purple.png')
-green_metal_path = os.path.join(
-    __file__, '..', 'assets/textures/metal_green.png')
-blue_metal_path = os.path.join(__file__, '..', 'assets/textures/metal_blue.png')
+parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
+
+red_metal_path = os.path.join(parent_dir, 'assets/textures/metal_red.png')
+cyan_metal_path = os.path.join(parent_dir, 'assets/textures/metal_cyan.png')
+purple_metal_path = os.path.join(parent_dir, 'assets/textures/metal_purple.png')
+green_metal_path = os.path.join(parent_dir, 'assets/textures/metal_green.png')
+blue_metal_path = os.path.join(parent_dir, 'assets/textures/metal_blue.png')
 
 
 texture = {
