@@ -34,8 +34,6 @@ class MujocoEnv(gym.Env):
   def __init__(self, model_path, frame_skip, max_episode_steps=None,
                reward_threshold=None):
 
-    del max_episode_steps, reward_threshold
-
     if model_path.startswith('/'):
       fullpath = model_path
     else:
