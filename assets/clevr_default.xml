@@ -33,26 +33,27 @@
       <joint name='obj3_slidex' type='slide' pos='0 0 0' axis='1 0 0' range='-10.3213 10.3' damping='0.5'/>
     </body>
 
-    <body name='r_wrist_flex_link' pos='0 0.8 -0.1'>
-      <geom name='wf' type='capsule' fromto='0 -0.05 0 0 0.05 0' size='0.01' />
-      <joint name='r_wrist_flex_joint_y' type='slide' pos='0 0 0' axis='0 1 0' range='-10.3213 10.3' damping='.1' />
-      <joint name='r_wrist_flex_joint_x' type='slide' pos='0 0 0' axis='1 0 0' range='-10.3213 10.3' damping='.1' />
-      <body name='r_wrist_roll_link' pos='0 0 0'>
-        <joint name='r_wrist_roll_joint' type='hinge' pos='0 0 0' limited='true' axis='1 0 0' damping='0.1' range='-1.5 1.5'/>
-        <body name='tips_arm' pos='0 0 0'>
-          <geom name='tip_arml' type='sphere' pos='-0.1 0 -0.1' size='0.01' />
-          <geom name='tip_armr' type='sphere' pos='0.1 0 -0.1' size='0.01' />
-        </body>
-        <geom type='capsule' fromto='-0.1 0 0. +0.1 0 0' size='0.02' contype='1' conaffinity='1' />
-        <geom type='capsule' fromto='-0.1 0. 0 -0.1 0 -0.1' size='0.02' contype='1' conaffinity='1' />
-        <geom type='capsule' fromto='0.1 0. 0 0.1 0 -0.1' size='0.02' contype='1' conaffinity='1' />
-      </body>
+    <body pos='-0.479373191783 -0.158222140745 -0.222862353829' name='obj3'>
+      <geom size='0.102137646171 0.102137646171 0.102137646171' conaffinity='1' contype='1' material='rubber' density='1' rgba='0.2 1 0 1' type='box'/>
+      <joint pos='0 0 0' damping='0.75' type='free' limited='false' name='obj3_slide'/>
     </body>
+
+    <body pos='0.366006216758 0.496730587281 -0.216666666667' name='obj4'>
+      <geom size='0.108333333333 0.0902777777778 0.05' conaffinity='1' contype='1' material='rubber' density='1' rgba='0.2 1 0 1' type='cylinder'/>
+      <joint pos='0 0 0' damping='0.75' type='free' limited='false' name='obj4_slide'/>
+    </body>
+
+    <body pos='0.469675315258 -0.205294383583 -0.2' name='point_mass'>
+      <geom type='sphere' contype='1' conaffinity='0' rgba='1 1 1 1' density='0.5' size='0.05' name='pm'/>
+      <joint type='slide' axis='1 0 0' damping='0.5' pos='0 0 0' name='pm_joint_x' range='-10.3213 10.3'/>
+      <joint type='slide' axis='0 1 0' damping='0.5' pos='0 0 0' name='pm_joint_y' range='-10.3213 10.3'/>
+    </body>
+
   </worldbody>
 
   <actuator>
-    <motor joint='r_wrist_flex_joint_y' ctrlrange='-2.0 2.0' ctrllimited='true' />
-    <motor joint='r_wrist_flex_joint_x' ctrlrange='-2.0 2.0' ctrllimited='true' />
+    <motor joint='pm_joint_x' ctrllimited='true' ctrlrange='-2.0 2.0'/>
+    <motor joint='pm_joint_y' ctrllimited='true' ctrlrange='-2.0 2.0'/>
   </actuator>
 
 </mujoco>

@@ -37,8 +37,8 @@ from clevr_robot_env.utils.xml_utils import convert_scene_to_xml
 
 try:
   import cv2
-  import mujoco
-  from gym.envs.mujoco import mujoco_env
+  import mujoco_env  # custom mujoco_env
+  from dm_control import mujoco
 except ImportError as e:
   print(e)
 
