@@ -13,11 +13,14 @@ Adapted from the CLEVR dataset generation code.
 # pylint: skip-file
 from __future__ import print_function
 
+import importlib.resources
 import json
 import os
 import random
 import re
 import time
+
+from clevr_robot_env.third_party.clevr_robot_env_utils.question_engine import answer_question
 
 try:
   import clevr_robot_env.third_party.clevr_robot_env_utils.question_engine as qeng
@@ -25,15 +28,10 @@ except ImportError as e:
   print(e)
 
 
-parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
-synonyms_json = os.path.join(
-    os.path.abspath(os.path.join(parent_dir, os.pardir)),
-    'templates',
-    'synonyms.json')
+import clevr_robot_env.templates
 
-
-with open(synonyms_json, 'r') as f:
-  SYNONYMS = json.load(f)
+with importlib.resources.open_text(clevr_robot_env.templates, "synonyms.json") as file:
+    SYNONYMS = json.load(file)
 
 
 def generate_question_from_scene_struct(scene_struct,
