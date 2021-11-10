@@ -34,7 +34,7 @@ import numpy as np
 
 import clevr_robot_env.third_party.clevr_robot_env_utils.generate_scene as gs
 import clevr_robot_env.third_party.clevr_robot_env_utils.question_engine as qeng
-from clevr_robot_env import assets
+from clevr_robot_env import assets, mujoco_env
 from clevr_robot_env import metadata
 from clevr_robot_env import templates
 from clevr_robot_env.assets import pregenerated_data
