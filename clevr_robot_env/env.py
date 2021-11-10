@@ -92,13 +92,11 @@ class ClevrEnv(mujoco_env.MujocoEnv, utils.EzPickle):
 
   def __init__(self,
                maximum_episode_steps=100,
-               xml_path=None,
                metadata_path=None,
                template_path=None,
                num_object=5,
                agent_type='pm',
                random_start=False,
-               fixed_objective=True,
                description_num=15,
                action_type='continuous',
                obs_type='direct',
