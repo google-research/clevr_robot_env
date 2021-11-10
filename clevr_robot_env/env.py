@@ -256,8 +256,8 @@ class ClevrEnv(mujoco_env.MujocoEnv, utils.EzPickle):
 
     if self.direct_obs:
       self.observation_space = spaces.Box(
-          low=np.concatenate(zip([-0.6] * num_object, [-0.4] * num_object)),
-          high=np.concatenate(zip([0.6] * num_object, [0.6] * num_object)),
+          low=np.concatenate(list(zip([-0.6] * num_object, [-0.4] * num_object))),
+          high=np.concatenate(list(zip([0.6] * num_object, [0.6] * num_object))),
           dtype=np.float32)
     else:
       self.observation_space = spaces.Box(
